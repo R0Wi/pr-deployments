@@ -13,6 +13,7 @@ jobs:
       - name: deploy the pull request
         run: |
           # deployment logic goes here
+          cat "$GITHUB_EVENT_PATH"
           sleep 10
 
           # instead we randomly succeed or fail the deployment
