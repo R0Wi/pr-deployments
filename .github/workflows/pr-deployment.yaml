@@ -6,7 +6,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: dev
+    environment:
+      name: dev
+      url: https://example.com/PR${{ github.event.issue.number }}
     steps:
       - name: deploy the pull request
         run: |
